@@ -88,7 +88,9 @@ git stash clear //you can delete all of your stashes
 
 9) How to get the clone link if the repo name is changed?
 Go to the folder in which name is changed
+```sh
 Type "git remote -v"
+```
 
 10) How to get only master branch and last commit
   ```sh
