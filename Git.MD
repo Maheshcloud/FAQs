@@ -1,5 +1,5 @@
 Git:
-1) Clone the repository and fetch only a single branch.
+### 1) Clone the repository and fetch only a single branch.
 
 ```sh
 git clone --branch <branchname> <remote-repo-url>
@@ -7,7 +7,7 @@ git clone --branch <branchname> <remote-repo-url>
 git clone --branch <branchname> --single-branch <remote-repo-url>
 ```
 
-2) Gitpull vs GitFetch vs GitRebase:
+### 2) Gitpull vs GitFetch vs GitRebase:
 You can use git fetch to know the changes done in the remote repo/branch since your last pull. This is useful to allow for checking before doing an actual pull, which could change files in your current branch and working copy 
 
 ```sh
@@ -23,7 +23,7 @@ Rebasing is an alternative to merging. Instead of creating a new commit that com
 You can pull using rebase instead of merge (git pull --rebase). The local changes you made will be rebased on top of the remote changes, instead of being merged with the remote changes.
 
 
-3) To clone only last commit:
+### 3) To clone only last commit:
 
 Use git clone with the --depth option set to 1 to create a shallow clone with a history truncated to the latest commit.
 
@@ -32,12 +32,12 @@ For example:
 git clone --depth 1 https://github.com/user/repo.git
 ```
 
-4) To get the clones URL from local:
+### 4) To get the clones URL from local:
 ```sh
 git config --get remote.origin.url
 ```
 
-5) .git folder contents: 
+### 5) .git folder contents: 
 The .git folder contains all the information that is necessary for your project in version control and all the information about commits, remote repository address, etc. All of them are present in this folder. It also contains a log that stores your commit history so that you can roll back to history.
 
 To untrack a single file, ie stop tracking the file but not delete it from the system use:
@@ -45,11 +45,11 @@ To untrack a single file, ie stop tracking the file but not delete it from the s
 git rm --cached filename
 ```
 
-6) What is sub module in git:
+### 6) What is sub module in git:
 A git submodule is a record within a host git repository that points to a specific commit in another external repository. Submodules are very static and only track specific commits. When adding a submodule to a repository a new .gitmodules file will be created. 
 
 
-7) How to untrack/delete specific file from staging: 
+### 7) How to untrack/delete specific file from staging: 
 If you need to remove a single file from the staging area, use
 ```sh
 git reset HEAD -- <file>
@@ -62,7 +62,7 @@ git reset HEAD -- <directoryName>
 git rm --cached FILE
 ```
 
-8) Git stash:
+### 8) Git stash:
 git stash temporarily shelves (or stashes) changes you've made to your working copy so you can work on something else, and then come back and re-apply them later on. 
 
 The git stash command takes your uncommitted changes (both staged and unstaged), saves them away for later use, and then reverts them from your working copy. 
@@ -86,21 +86,21 @@ git stash drop  //to delete a particular stash
 
 git stash clear //you can delete all of your stashes
 
-9) How to get the clone link if the repo name is changed?
+### 9) How to get the clone link if the repo name is changed?
 Go to the folder in which name is changed
 ```sh
 Type "git remote -v"
 ```
 
-10) How to get only master branch and last commit
+### 10) How to get only master branch and last commit
   ```sh
 git clone -b master --single-branch --depth 1 gitURL
 ```
-11) To check the commings of the Project:
+### 11) To check the commings of the Project:
   ```sh
 git log --oneline
 ```
-12) How to uncommit/unsave the file from staging?Or to move a file from staging to local
+### 12) How to uncommit/unsave the file from staging?Or to move a file from staging to local
   ```sh
 git rm --cached filename
 ```
