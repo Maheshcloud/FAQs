@@ -51,13 +51,16 @@ A git submodule is a record within a host git repository that points to a specif
 
 7) How to untrack/delete specific file from staging: 
 If you need to remove a single file from the staging area, use
+```sh
 git reset HEAD -- <file>
-
+```
 If you need to remove a whole directory (folder) from the staging area, use
+```sh
 git reset HEAD -- <directoryName>
 
 (Or)
 git rm --cached FILE
+```
 
 8) Git stash:
 git stash temporarily shelves (or stashes) changes you've made to your working copy so you can work on something else, and then come back and re-apply them later on. 
@@ -88,14 +91,17 @@ Go to the folder in which name is changed
 Type "git remote -v"
 
 10) How to get only master branch and last commit
+  ```sh
 git clone -b master --single-branch --depth 1 gitURL
-
+```
 11) To check the commings of the Project:
+  ```sh
 git log --oneline
-
+```
 12) How to uncommit/unsave the file from staging?Or to move a file from staging to local
+  ```sh
 git rm --cached filename
-
+```
 
 
 ### git reset vs git revert:
